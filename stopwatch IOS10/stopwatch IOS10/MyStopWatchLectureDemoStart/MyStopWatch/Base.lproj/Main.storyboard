@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Courier.ttc">
+            <string>Courier-Bold</string>
+        </array>
+        <array key="digital-7 (mono italic).ttf">
+            <string>Digital-7MonoItalic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyStopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="UGU-bs-awv">
+                                <rect key="frame" x="16" y="57" width="343" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="szF-Am-Nq5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Digital-7MonoItalic" family="Digital-7" pointSize="64"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnY-X0-1Re">
+                                <rect key="frame" x="16" y="155" width="336" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="dIn-f6-KCe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Digital-7MonoItalic" family="Digital-7" pointSize="53"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elapsed Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ai-7G-Pvb">
+                                <rect key="frame" x="129" y="128" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9Q-Av-gAF" customClass="RoundButton" customModule="MyStopWatch" customModuleProvider="target">
+                                <rect key="frame" x="16" y="262" width="102" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="102" id="DJ0-eB-7Za"/>
+                                    <constraint firstAttribute="height" constant="100" id="TFf-Ao-OQm"/>
+                                    <constraint firstAttribute="width" constant="102" id="WiM-Wa-z7e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="24"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startTimeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Skr-o3-8pM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LE6-W0-UOJ" customClass="RoundButton" customModule="MyStopWatch" customModuleProvider="target">
+                                <rect key="frame" x="257" y="262" width="102" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="HI7-mf-hZ0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="102" id="Ka9-HU-1za"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="102" id="YHj-V3-PGp"/>
+                                    <constraint firstAttribute="width" constant="102" id="jRN-tB-9LT"/>
+                                    <constraint firstAttribute="height" constant="100" id="n1M-sa-SQy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="24"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.89756503809999999" green="0.0" blue="0.083762853750000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pauseResumeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ln-3i-SV8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bb8-1B-2Vq">
+                                <rect key="frame" x="129" y="28" width="117" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="0OZ-zz-Jlc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="LE6-W0-UOJ" firstAttribute="baseline" secondItem="z9Q-Av-gAF" secondAttribute="firstBaseline" id="Cbw-0h-OmV"/>
+                            <constraint firstItem="UGU-bs-awv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DrZ-2B-BO4"/>
+                            <constraint firstItem="UGU-bs-awv" firstAttribute="trailing" secondItem="rnY-X0-1Re" secondAttribute="trailing" id="E3m-fA-INQ"/>
+                            <constraint firstItem="Bb8-1B-2Vq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="999" constant="8" symbolic="YES" id="L4G-m3-41I"/>
+                            <constraint firstItem="UGU-bs-awv" firstAttribute="top" secondItem="Bb8-1B-2Vq" secondAttribute="bottom" constant="8" symbolic="YES" id="O8i-Ij-s2f"/>
+                            <constraint firstItem="3Ai-7G-Pvb" firstAttribute="centerX" secondItem="rnY-X0-1Re" secondAttribute="centerX" id="Vmq-Uu-3Y6"/>
+                            <constraint firstItem="3Ai-7G-Pvb" firstAttribute="top" secondItem="UGU-bs-awv" secondAttribute="bottom" constant="8" symbolic="YES" id="X9S-WA-3e1"/>
+                            <constraint firstItem="Bb8-1B-2Vq" firstAttribute="trailing" secondItem="3Ai-7G-Pvb" secondAttribute="trailing" id="XTD-p1-dR1"/>
+                            <constraint firstItem="z9Q-Av-gAF" firstAttribute="baseline" secondItem="LE6-W0-UOJ" secondAttribute="firstBaseline" id="ZSD-6w-K8f"/>
+                            <constraint firstItem="rnY-X0-1Re" firstAttribute="trailing" secondItem="LE6-W0-UOJ" secondAttribute="trailing" id="blt-CG-NPK"/>
+                            <constraint firstItem="z9Q-Av-gAF" firstAttribute="top" secondItem="rnY-X0-1Re" secondAttribute="bottom" constant="44" id="cSe-aI-ibQ"/>
+                            <constraint firstItem="Bb8-1B-2Vq" firstAttribute="leading" secondItem="3Ai-7G-Pvb" secondAttribute="leading" id="clO-lu-6r3"/>
+                            <constraint firstItem="UGU-bs-awv" firstAttribute="leading" secondItem="rnY-X0-1Re" secondAttribute="leading" id="dEu-iO-cP3"/>
+                            <constraint firstItem="rnY-X0-1Re" firstAttribute="top" secondItem="3Ai-7G-Pvb" secondAttribute="bottom" constant="6" id="dH5-qK-k6O"/>
+                            <constraint firstItem="UGU-bs-awv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="elc-wI-P3X"/>
+                            <constraint firstItem="rnY-X0-1Re" firstAttribute="leading" secondItem="z9Q-Av-gAF" secondAttribute="leading" id="qxP-t0-auZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z9Q-Av-gAF" secondAttribute="bottom" constant="305" id="wdu-AY-Kfg"/>
+                            <constraint firstItem="z9Q-Av-gAF" firstAttribute="top" secondItem="LE6-W0-UOJ" secondAttribute="top" id="xwu-Xb-HsT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="UGU-bs-awv" id="pvc-wa-rJY"/>
+                        <outlet property="elapsedTimeLabel" destination="rnY-X0-1Re" id="YfT-b3-g3q"/>
+                        <outlet property="pauseResumeBtn" destination="LE6-W0-UOJ" id="Kc1-jy-Q0C"/>
+                        <outlet property="startResetBtn" destination="z9Q-Av-gAF" id="UGu-8K-gQZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
